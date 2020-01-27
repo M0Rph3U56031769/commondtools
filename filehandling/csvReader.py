@@ -28,15 +28,15 @@ class Reader:
 
 if __name__ == "__main__":
 
-    def getData(filename:str):
+    def getData(file_name:str):
         import os
 
-        dirname = os.path.dirname(__file__)
-        dirname = os.path.dirname(dirname)
-        return os.path.join(dirname, "data/"+filename)
-    import os
-    dirname = os.path.dirname(__file__)
-    dirname = os.path.dirname(dirname)
-    filename = os.path.join(dirname, getData(filename="example.csv"))
-    csv_example = Reader(file=filename)
+        directory_name = os.path.dirname(__file__)
+        directory_name = os.path.dirname(directory_name)
+        return os.path.join(directory_name, "data/" + file_name)
+    # import os
+    # dirname = os.path.dirname(__file__)
+    # dirname = os.path.dirname(dirname)
+    # filename = os.path.join(dirname, getData(file_name="example.csv"))
+    csv_example = Reader(file=getData(file_name="example.csv"))
     csv_example.read()
