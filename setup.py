@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="commondtools",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.3",
     author="Daniel Nagy",
     author_email="nagydaniel1337@gmail.com",
     description="Common tools.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/M0Rph3U56031769/easytools",
+    url="https://github.com/M0Rph3U56031769/commondtools",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
