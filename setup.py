@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="commondtools",  # Replace with your own username
-    version="0.0.3",
+    version="0.0.4",
     author="Daniel Nagy",
     author_email="nagydaniel1337@gmail.com",
     description="Common tools.",
