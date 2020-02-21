@@ -32,6 +32,7 @@ class Pinger:
         :param start:
         :param end:
         """
+        # TODO: https://stackoverflow.com/questions/5442910/python-multiprocessing-pool-map-for-multiple-arguments
         from itertools import product
         num_threads = 2 * multiprocessing.cpu_count()
         # p = multiprocessing.dummy.Pool(num_threads)
