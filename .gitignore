@@ -3,3 +3,5 @@
 /data/
 /dist/
 /dtools_dnagy.egg-info/
+/.idea/
+/build/
