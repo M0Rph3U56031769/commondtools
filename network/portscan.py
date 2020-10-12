@@ -62,7 +62,7 @@ class PortScan:
 
 
 if __name__ == '__main__':
-    print(PortScan.portScan("epm.mphr11.morpho.com", 1433))
+    print(PortScan.portScan("localhost", 1433))
     # print("PORT SCANNER")
     #
     # # Defining a target
