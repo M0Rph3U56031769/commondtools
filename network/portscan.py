@@ -105,7 +105,7 @@ if __name__ == '__main__':
     #             s.close()
     #
     #     except KeyboardInterrupt:
-    #         print("\n Exitting Program !!!!")
+    #         print("\n Exiting Program !!!!")
     #         sys.exit()
     #     except socket.gaierror:
     #         print("\n Hostname Could Not Be Resolved !!!!")
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     #             print("Port {} is closed".format(PORT))
     #         s.close()
     #     except KeyboardInterrupt:
-    #         print("\n Exitting Program !!!!")
+    #         print("\n Exiting Program !!!!")
     #         sys.exit()
     #     except socket.gaierror:
     #         print("\n Hostname Could Not Be Resolved !!!!")
