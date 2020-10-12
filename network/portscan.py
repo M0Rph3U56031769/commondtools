@@ -1,3 +1,7 @@
+"""
+Simple port scan tool
+"""
+
 import sys
 import socket
 
