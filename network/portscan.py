@@ -2,14 +2,14 @@
 Simple port scan tool
 """
 
-import sys
 import socket
+import sys
 
 
 class PortScan:
 
     @staticmethod
-    def portScan(host: str, port: int):
+    def port_scan(host: str, port: int):
         ip = socket.gethostbyname(host)
 
         if port == "full":
@@ -65,7 +65,7 @@ class PortScan:
 
 
 if __name__ == '__main__':
-    print(PortScan.portScan("epm.mphr11.morpho.com", 1433))
+    print(PortScan.port_scan("localhost", 1433))
     # print("PORT SCANNER")
     #
     # # Defining a target
