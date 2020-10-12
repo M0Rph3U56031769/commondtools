@@ -28,7 +28,7 @@ class Reader:
 
 if __name__ == "__main__":
 
-    def getData(file_name:str):
+    def getData(file_name: str):
         import os
 
         directory_name = os.path.dirname(__file__)
