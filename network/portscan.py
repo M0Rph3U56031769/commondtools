@@ -31,7 +31,7 @@ class PortScan:
                         return False
 
             except KeyboardInterrupt:
-                print("\n Exitting Program !!!!")
+                print("\n Exiting Program !!!!")
                 sys.exit(1)
             except socket.gaierror:
                 print("\n Hostname Could Not Be Resolved !!!!")
@@ -54,7 +54,7 @@ class PortScan:
                     print("Port {} is closed".format(port))
                     return False
             except KeyboardInterrupt:
-                print("\n Exitting Program !!!!")
+                print("\n Exiting Program !!!!")
                 sys.exit(1)
             except socket.gaierror:
                 print("\n Hostname Could Not Be Resolved !!!!")
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     # PORT: int = -1
     #
     # if len(sys.argv) != 3:
-    #     print("Invalid ammount of Argument")
+    #     print("Invalid amount of Argument")
     #     HOST = input("Give me the host name or IP: ")
     #     PORT = int(input("...and now the port(type 'full' if you want a full scan): "))
     # else:
