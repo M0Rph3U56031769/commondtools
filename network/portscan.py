@@ -31,13 +31,13 @@ class PortScan:
                         return False
 
             except KeyboardInterrupt:
-                print("\n Exiting Program !!!!")
+                print("\n Exiting Program!!!")
                 sys.exit(1)
             except socket.gaierror:
-                print("\n Hostname Could Not Be Resolved !!!!")
+                print("\n Hostname Could Not Be Resolved!!!")
                 sys.exit(1)
             except socket.error:
-                print("\n Server not responding !!!!")
+                print("\n Server not responding!!!")
                 sys.exit(1)
         else:
             try:
@@ -54,13 +54,13 @@ class PortScan:
                     print("Port {} is closed".format(port))
                     return False
             except KeyboardInterrupt:
-                print("\n Exiting Program !!!!")
+                print("\n Exiting Program!!!")
                 sys.exit(1)
             except socket.gaierror:
-                print("\n Hostname Could Not Be Resolved !!!!")
+                print("\n Hostname Could Not Be Resolved!!!")
                 sys.exit(1)
             except socket.error:
-                print("\n Server not responding !!!!")
+                print("\n Server not responding!!!")
                 sys.exit(1)
 
 
