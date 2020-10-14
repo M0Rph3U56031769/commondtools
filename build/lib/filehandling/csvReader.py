@@ -11,7 +11,6 @@ class Reader:
 
     def read(self):
         csv_header: list = []
-        csv_table: dict = {}
 
         with open(file=self.file, mode="r") as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=self.delimiter)
@@ -28,11 +27,13 @@ class Reader:
 
 if __name__ == "__main__":
 
-    def getData(file_name:str):
+    def get_data(file_name: str):
         import os
 
         directory_name = os.path.dirname(__file__)
         directory_name = os.path.dirname(directory_name)
         return os.path.join(directory_name, "data/" + file_name)
-    csv_example = Reader(file=getData(file_name="example.csv"))
+
+
+    csv_example = Reader(file=get_data(file_name="example.csv"))
     csv_example.read()

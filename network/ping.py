@@ -1,5 +1,5 @@
-import subprocess
 import multiprocessing.dummy
+import subprocess
 
 
 class Pinger:
@@ -27,28 +27,32 @@ class Pinger:
     def ping_range(network: str = "192.168.0.", start: int = 1, end: int = 254, liveoutput: bool = False):
         """
 
-        :param liveoutput:
-        :param network:
-        :param start:
-        :param end:
+        :param liveoutput: is console output live, or just get the result at the end
+        :type liveoutput: bool
+        :param network: subnet (currently only /24 is implemented)
+        :type network: str
+        :param start: first host number
+        :type start: int
+        :param end: last host number
+        :type end: int
         """
         # TODO: https://stackoverflow.com/questions/5442910/python-multiprocessing-pool-map-for-multiple-arguments
         from itertools import product
         num_threads = 2 * multiprocessing.cpu_count()
-        # p = multiprocessing.dummy.Pool(num_threads)
-        # result = p.map(Pinger.ping, [network + str(x) for x in range(start, end)])
 
         with multiprocessing.Pool(processes=num_threads) as pool:
             results = pool.starmap(Pinger.ping, product([network + str(x) for x in range(start, end)]), liveoutput)
-            # print(results)
 
         return results
 
     @staticmethod
-    def singleping(hostname):
+    def singleping(hostname: str):
         """
-        :param hostname:
-        :return:
+        Ping only 1 times
+
+        :param hostname: hostname to ping
+        :type hostname: str
+        :return: result of ping: str
         """
         output = subprocess.getoutput("timeout 1 ping -c 1 " + hostname).split(" ")
         for i in output:
@@ -59,6 +63,3 @@ class Pinger:
 
 if __name__ == "__main__":
     print(Pinger.ping_range(network="192.168.0.", start=1, end=81, liveoutput=True))
-    # response = Pinger.ping("192.168.0.2")
-    # if response:
-    #     print(response)
