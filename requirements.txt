@@ -6,7 +6,7 @@ cffi==1.14.3
 chardet==3.0.4
 colorama==0.4.4
 commondtools==0.0.7
-cryptography==3.2
+cryptography~>3.2
 docutils==0.16
 idna==2.10
 importlib-metadata==2.0.0
