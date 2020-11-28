@@ -6,3 +6,5 @@
 /.idea/
 /build/
 /commondtools.egg-info/
+/pypirc
+/create_wheel.bat
