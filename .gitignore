@@ -8,3 +8,5 @@
 /commondtools.egg-info/
 /pypirc
 /create_wheel.bat
+/token.nfo
+/upload.bat
