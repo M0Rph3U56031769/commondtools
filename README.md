@@ -1,4 +1,5 @@
 # Common D-Tools
+![CodeQL](https://github.com/M0Rph3U56031769/commondtools/workflows/CodeQL/badge.svg)
 
 This is a simple package for common usage. 
 
