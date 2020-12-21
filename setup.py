@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="commondtools",
-    version="0.0.11",
+    version="0.0.13",
     author="Daniel Nagy",
     author_email="nagydaniel1337@gmail.com",
     description="Common D-tools.",

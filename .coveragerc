@@ -1,0 +1,11 @@
+[run]
+source =
+    filehandling/
+    network/
+    parallel/
+
+omit =
+    venv/*
+    dist/*
+    build/*
+    .github/*

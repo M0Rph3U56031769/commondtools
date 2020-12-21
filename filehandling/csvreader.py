@@ -26,10 +26,10 @@ class Reader:
 
 
 if __name__ == "__main__":
+    import os
+
 
     def get_data(file_name: str):
-        import os
-
         directory_name = os.path.dirname(__file__)
         directory_name = os.path.dirname(directory_name)
         return os.path.join(directory_name, "data/" + file_name)

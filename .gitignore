@@ -10,3 +10,8 @@
 /create_wheel.bat
 /token.nfo
 /upload.bat
+*.html
+/htmlcov/
+*.exe
+*.log
+/.coverage/

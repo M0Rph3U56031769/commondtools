@@ -12,6 +12,10 @@ import pandas as pd
 
 
 class CSVManager:
+    """
+    CSVManager is able to handle easily csv files with validation.
+    """
+
     csv_path: str
     csv_files: list
     logger = logging.getLogger('Importer')
@@ -26,9 +30,13 @@ class CSVManager:
         self.logger.addHandler(self.handler)
 
     def get_all_data_as_list(self):
+        """
+        Getting all the csv data as a list.
+        :return: all the csv content in a list.
+        """
         return self.read_all_csv()
 
-    def get_csv_files(self):
+    def get_csv_files(self):  # pragma: no cover
         """
         Get the list of csv file names
 
@@ -36,7 +44,8 @@ class CSVManager:
         """
 
         module_path = self.csv_path
-        csv_files = [f for f in listdir(module_path) if isfile(join(module_path, f)) and ".csv" in f]
+        csv_files = [f for f in listdir(module_path) if isfile(join(module_path, f))
+                     and ".csv" in f]
         self.csv_files = list(csv_files)
         return csv_files
 
@@ -55,10 +64,10 @@ class CSVManager:
 
         self.logger.debug(csv_reader)
         # read content by rows without header
-        df = pd.DataFrame(csv_reader)
+        dataframe = pd.DataFrame(csv_reader)
         columns = []
-        for column_name in df.columns.array:
-            columns.append(df[column_name].to_numpy())
+        for column_name in dataframe.columns.array:
+            columns.append(dataframe[column_name].to_numpy())
         for column in columns:
             data_type = ''
             for cell in column:
@@ -67,7 +76,7 @@ class CSVManager:
                     data_type = 'float'
                 except ValueError:
                     if data_type == 'float':
-                        self.logger.error('cannot convert to a float: ' + str(cell))
+                        logging.error('cannot convert to a float: ' + str(cell))
                         return False
         return True
 
@@ -84,7 +93,7 @@ class CSVManager:
         for row in csv_reader:
             for cell in row:
                 if cell in (None, ""):
-                    self.logger.error("Empty cell found at: " + str(row))
+                    logging.error("Empty cell found at: " + str(row))
                     integrity = False
         return integrity
 
