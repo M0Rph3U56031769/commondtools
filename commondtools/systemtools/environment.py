@@ -34,6 +34,6 @@ class SystemTools:
 
 
 if __name__ == "__main__":
-    System.disable_lockscreen()
+    SystemTools.disable_lockscreen()
     input("Press enter to exit...")
-    System.enable_lockscreen()
+    SystemTools.enable_lockscreen()

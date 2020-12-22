@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from unittest import TestCase
 
-from filehandling.csvmanager import CSVManager
+from .csvmanager import CSVManager
 
 
 class TestCSVManager(TestCase):
