@@ -6,7 +6,7 @@ General used methods for e.g. prevent screensaver
 from ctypes import windll
 
 
-class System:
+class SystemTools:
 
     @staticmethod
     def disable_lockscreen():
