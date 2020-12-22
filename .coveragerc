@@ -1,8 +1,6 @@
 [run]
 source =
-    filehandling/
-    network/
-    parallel/
+    commondtools/
 
 omit =
     venv/*
