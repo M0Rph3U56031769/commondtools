@@ -3,9 +3,11 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+version = "0.0.24"
+
 setuptools.setup(
     name="commondtools",
-    version="0.0.23",
+    version=version,
     author="Daniel Nagy",
     author_email="nagydaniel1337@gmail.com",
     description="Common D-tools.",
@@ -26,7 +28,7 @@ setuptools.setup(
         "coverage==5.3",
         "cryptography==3.2.1",
         "docutils==0.16",
-        "idna==2.10",
+        "idna>=2.5",
         "importlib-metadata==3.1.0",
         "isort==5.6.4",
         "jeepney==0.6.0",
