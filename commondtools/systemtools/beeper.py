@@ -2,6 +2,8 @@ import time
 import winsound
 from typing import Iterable
 
+from commondtools.includes.decorators import windows_only
+
 
 class Beep:
 
@@ -9,6 +11,7 @@ class Beep:
         pass
 
     @staticmethod
+    @windows_only
     def beep(frequency: int, duration: int):
         """
 
@@ -18,6 +21,7 @@ class Beep:
         :type duration: int
         :return:
         """
+
         winsound.Beep(frequency=frequency, duration=duration)
 
     @staticmethod
@@ -45,7 +49,6 @@ class Beep:
             if letter == 1:
                 print("1 chosen")
                 Beep.beep(frequency=frequency, duration=long_duration)
-                # time.sleep(0.01)
             elif letter == 0:
                 print("0 chosen")
                 Beep.beep(frequency=frequency, duration=short_duration)
@@ -72,14 +75,17 @@ class Beep:
         return string_list
 
     @staticmethod
-    def morse(code: Iterable[int]):
-        print("morse str: {}, {}".format(type(code), str(code)))
+    @windows_only
+    def morse(code: Iterable[int], verbose: bool = False):
+
+        if verbose:
+            print("morse str: {}, {}".format(type(code), str(code)))
+
         Beep.morse_executor(code=code)
 
 
 if __name__ == "__main__":
     print("Starting")
-    # Beep.morse("1001100")
     Beep.morse_executor((1, 0, 1, 1, 0, 0, 1))
     Beep.morse_executor([0, 0, 0, 1, 1, 1, 0, 0, 0])
     Beep.morse_executor("asdasd")

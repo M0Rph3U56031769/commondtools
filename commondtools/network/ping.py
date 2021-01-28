@@ -1,6 +1,8 @@
 import multiprocessing.dummy
 import subprocess
 
+from commondtools.includes.decorators import linux_only
+
 
 class Pinger:
 
@@ -21,7 +23,6 @@ class Pinger:
             else:
                 print("{} did not respond".format(ip))
         return {ip: success}
-        # return success
 
     @staticmethod
     def ping_range(network: str = "192.168.0.", start: int = 1, end: int = 254, liveoutput: bool = False):
@@ -46,6 +47,7 @@ class Pinger:
         return results
 
     @staticmethod
+    @linux_only
     def singleping(hostname: str):
         """
         Ping only 1 times
