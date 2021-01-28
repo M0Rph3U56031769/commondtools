@@ -42,7 +42,7 @@ class SystemTools:
     def get_username() -> str:
         """
         get the current os user name
-        :return:
+        :return: current os user name
         """
         return os.getlogin()
 
