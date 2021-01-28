@@ -3,10 +3,17 @@ General used methods for e.g. prevent screensaver
 
 """
 
+import os
+import platform
 from ctypes import windll
 
 
 class SystemTools:
+
+    @staticmethod
+    def win_only():
+        if SystemTools.check_os() != "Windows":
+            raise NotImplementedError("Windows only feature")
 
     @staticmethod
     def disable_lockscreen():
@@ -18,6 +25,7 @@ class SystemTools:
 
         """
 
+        SystemTools.win_only()
         windll.kernel32.SetThreadExecutionState(0x80000002)
 
     @staticmethod
@@ -30,10 +38,18 @@ class SystemTools:
 
         """
 
+        SystemTools.win_only()
         windll.kernel32.SetThreadExecutionState(0x80000000)
 
+    @staticmethod
+    def get_username() -> str:
+        return os.getlogin()
 
-if __name__ == "__main__":
-    SystemTools.disable_lockscreen()
-    input("Press enter to exit...")
-    SystemTools.enable_lockscreen()
+    @staticmethod
+    def check_os() -> str:
+        """
+        e.g.: Linux, Windows
+        :return:
+        :rtype: str
+        """
+        return platform.system()
