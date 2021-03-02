@@ -18,7 +18,7 @@ setuptools.setup(
     include_package_data=True,
     install_requires=[
         "astroid==2.4.2",
-        "bleach==3.2.1",
+        "bleach==3.3.0",
         "bump2version==1.0.1",
         "bumpversion==0.6.0",
         "certifi==2020.12.5",
