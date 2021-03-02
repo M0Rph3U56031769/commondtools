@@ -26,7 +26,7 @@ setuptools.setup(
         "chardet==3.0.4",
         "colorama==0.4.4",
         "coverage==5.3",
-        "cryptography==3.2.1",
+        "cryptography==3.3.2",
         "docutils==0.16",
         "idna>=2.5",
         "importlib-metadata==3.1.0",
