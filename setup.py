@@ -56,7 +56,7 @@ setuptools.setup(
         "toml==0.10.2",
         "tqdm==4.54.0",
         "twine==3.2.0",
-        "urllib3==1.26.4",
+        "urllib3~>1.26.5",
         "webencodings==0.5.1",
         "wrapt==1.12.1",
         "zipp==3.4.0"
