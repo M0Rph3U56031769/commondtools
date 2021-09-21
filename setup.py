@@ -40,7 +40,7 @@ setuptools.setup(
         "pandas==1.1.4",
         "pkginfo==1.6.1",
         "pycparser==2.20",
-        "Pygments==2.7.2",
+        "Pygments~>2.7.4",
         "pylint==2.6.0",
         "pyparsing==2.4.7",
         "python-dateutil==2.8.1",
