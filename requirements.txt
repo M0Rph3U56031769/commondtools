@@ -19,7 +19,7 @@ jeepney==0.6.0
 keyring==22.0.1
 lazy-object-proxy==1.5.2
 mccabe==0.6.1
-numpy==1.19.5
+numpy==1.22.0
 outcome==1.1.0
 packaging==20.8
 pandas==1.1.5
