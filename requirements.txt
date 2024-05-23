@@ -42,7 +42,7 @@ six==1.15.0
 sniffio==1.2.0
 sortedcontainers==2.3.0
 toml==0.10.2
-tqdm==4.56.0
+tqdm==4.66.3
 trio==0.18.0
 trio-websocket==0.9.1
 twine==3.3.0
