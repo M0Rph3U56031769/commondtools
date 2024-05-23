@@ -33,7 +33,7 @@ python-dateutil==2.8.1
 pytz==2020.5
 pywin32-ctypes==0.2.0
 readme-renderer==28.0
-requests==2.25.1
+requests==2.31.0
 requests-toolbelt==0.9.1
 rfc3986==1.4.0
 SecretStorage==3.3.0
